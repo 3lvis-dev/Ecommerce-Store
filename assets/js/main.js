@@ -148,7 +148,6 @@ function totalPrice() {
 
         html += `
         <div class="cart__prices">
-            <span class="cart__prices-item"><span id="items-count">0</span> items</span>
             <div class="cart__checkout">
                 <button class="button cart__btn" id="cart-checkout" disabled>
                     <i class="bx bxs-check-shield"></i> Checkout
