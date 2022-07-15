@@ -128,9 +128,27 @@ function totalPrice() {
 
     shopArray.forEach((n) => {
         suma += n.amount * n.price;
+        return suma;
     });
 
-    cartSubTotal.textContent = suma;
+    let html = '';
+
+    shopArray.forEach(() => {
+
+        html += `
+        <div class="cart__prices">
+            <span class="cart__prices-item"><span id="items-count">0</span> items</span>
+            <div class="cart__checkout">
+                <button class="button cart__btn" id="cart-checkout" disabled>
+                    <i class="bx bxs-check-shield"></i> Checkout
+                </button>
+            </div>
+            <span class="cart__prices-total" id="cart-total">$${suma}.00</span>
+        </div> `
+    })
+
+    cartSubTotal.innerHTML = html;
+
 }
 
 /*---------------------- Products Cart Shop ----------------------*/
