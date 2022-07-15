@@ -11,6 +11,21 @@ setTimeout(() => {
    load.style = "display: none;"
 }, 3000)
 
+/*---------------------- Dark Mode ----------------------*/
+const control = localStorage.getItem("darkTeme") || false
+const body = document.querySelector("body")
+const themeButton = document.getElementById("theme-button")
+const cartCount = document.getElementById("cart-count")
+
+if(JSON.parse(control)){
+    themeButton.classList.add("bx-sun")
+    body.classList.add("dark-theme")
+ }
+ themeButton.addEventListener("click", () => {
+    themeButton.classList.toggle("bx-sun")
+    body.classList.toggle("dark-theme")
+ })
+
 /*---------------------- Cart shop menu ----------------------*/
 const navShop = document.getElementById("cart-shop");
 const cart = document.getElementById("cart");
@@ -23,6 +38,7 @@ navShop.addEventListener("click", (e) => {
 cardClose.addEventListener("click", (e) => {
    cart.classList.toggle("open")
 });
+
 
 /*---------------------- Fake Data Product ----------------------*/
 const data = [
