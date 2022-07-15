@@ -107,7 +107,6 @@ cartContainer.addEventListener('click', (event) => {
         delete shopObj[id];
     }
 
-    // totalItemsInCart()      //Total de productos en carrito
     countProductsInCart()   //Contador de productos en icono de tienda
     totalPrice()            //Precio total de productos en carrito
     printShopCart()         //Imprimir productos en carrito
@@ -129,7 +128,6 @@ productsContainer.addEventListener('click', (event) => {
             shopObj[id].amount = 1;
         }
 
-        // totalItemsInCart()      //Total de productos en carrito
         countProductsInCart()   //Contador de productos en icono de tienda
         totalPrice()            //Precio total de productos en carrito
         printShopCart()         //Imprimir productos en carrito
@@ -141,11 +139,6 @@ function countProductsInCart() {
     const countProducts = document.querySelector(".count__products"); 
     countProducts.textContent = Object.values(shopObj).length;
 }
-
-// function totalItemsInCart() {
-//     const cartItems = document.querySelector("#items-count");
-//     cartItems.textContent = Object.values(shopObj).length;
-// }
 
 /*---------------------- Total Price ----------------------*/
 function totalPrice() {
