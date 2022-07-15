@@ -1,5 +1,16 @@
 // console.log("Prueba vinculación archivo main.js");
 
+/*---------------------- Loader ----------------------*/
+const load = document.getElementById("load")
+const logo = document.querySelector(".load__gif")
+const intervalo  = setInterval(()=>{
+   logo.classList.toggle("load_logo")
+}, 900)
+setTimeout(() => {
+   clearInterval(intervalo)
+   load.style = "display: none;"
+}, 3000)
+
 /*---------------------- Cart shop menu ----------------------*/
 const navShop = document.getElementById("cart-shop");
 const cart = document.getElementById("cart");
