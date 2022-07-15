@@ -101,10 +101,13 @@ cartContainer.addEventListener('click', (event) => {
     }
 
     if (event.target.classList.contains("bx-trash-alt")) {
-        console.log(event.target.dataset.id);
         const id = parseInt(event.target.dataset.id);
 
-        delete shopObj[id];
+        const trash = confirm("Sure you want to delete?")
+
+        if (trash) {
+            delete shopObj[id];
+        }
     }
 
     countProductsInCart()   //Contador de productos en icono de tienda
