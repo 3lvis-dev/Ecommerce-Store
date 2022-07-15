@@ -139,8 +139,6 @@ function printShopCart() {
     
     let html = '';
 
-    items = amount + price;
-
     shopArray.forEach(({id, name, price, image, category, stock, amount}) => {
 
         html += `
@@ -153,7 +151,7 @@ function printShopCart() {
             <h3 class="cart__title">${name}</h3>
             <span class="cart__stock">Stock: ${stock} | <span class="cart__price">$${price}</span></span>
             <span class="cart__subtotal">
-                Subtotal: $.00
+                Subtotal: $${price = price * amount}.00
             </span>
         
             <div class="cart__amount">
